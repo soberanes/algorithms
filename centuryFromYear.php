@@ -5,13 +5,7 @@
  * up to and including the year 200, etc.
  */
 function centuryFromYear($year) {
-    $century = $year / 100;
-
-    if ($year % 100) {
-        return (int) $century + 1;
-    }
-
-    return (int) $century;
+    return ceil($year / 100);
 }
 
 $result = centuryFromYear(1905);
