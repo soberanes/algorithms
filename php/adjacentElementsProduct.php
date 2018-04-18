@@ -7,11 +7,10 @@ function adjacentElementsProduct($inputArray) {
     $products = [];
 
     for ($i=0; $i < count($inputArray)-1; $i++) {
-        $product = $inputArray[$i] * $inputArray[$i+1];
-        array_push($products, $product);
+        $products[] = $inputArray[$i] * $inputArray[$i+1];
     }
-    rsort($products);
-    return current($products);
+    
+    return max($products);
 }
 
 
