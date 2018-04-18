@@ -6,10 +6,10 @@
 function adjacentElementsProduct($inputArray) {
     $products = [];
 
-    for ($i=0; $i < count($inputArray)-1; $i++) {
+    for ($i=0, $limit = count($inputArray)-1; $i < $limit; $i++) {
         $products[] = $inputArray[$i] * $inputArray[$i+1];
     }
-    
+
     return max($products);
 }
 
